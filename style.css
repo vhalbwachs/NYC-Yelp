@@ -1,0 +1,42 @@
+#container {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+#dialog {
+	width: 400px;
+	height: 100%;
+	overflow: scroll;
+	position: absolute;
+	top: 0px;
+	z-index: 9999;
+}
+
+.hidden {
+	display: none;
+}
+
+h4 {
+	display: inline-block;
+	width: 230px;
+	color: red;
+}
+
+span.badge {
+	padding: 1px 4px;
+	margin-right: 5px;
+}
+
+#results {
+padding: 0px;
+}
+
+#station_name {
+	color: white;
+	border-top: 2px white solid;
+}
+
+div.panel-default>.panel-heading {
+background-color: #000000;
+}

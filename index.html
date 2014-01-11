@@ -1,0 +1,51 @@
+<html>
+<head>
+	<title>New Yelp City</title>
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+	<script type="text/javascript" src="http://oauth.googlecode.com/svn/code/javascript/oauth.js"></script>
+	<script type="text/javascript" src="http://oauth.googlecode.com/svn/code/javascript/sha1.js"></script>
+	<script type="text/javascript" src="lib/handlebars-v1.3.0.js"></script>
+	<script src="lib/mapFunctions.js"type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+</head>
+<body>
+	<script id="results-template" type="text/x-handlebars-template">
+	{{#each businesses}}
+	<a href="{{url}}" class="list-group-item">
+		<div><h4 class="list-group-item-heading">{{name}}</h4><img <img width="75" height="15" class="pull-right" src="{{rating_img_url}}"></h4><span class="badge pull-right">{{review_count}}</span></div>
+		<p class="list-group-item-text">
+			<img class="pull-right" width="75" height="75" src="{{image_url}}">
+			<address>
+			{{#each location.display_address}} 
+			{{this}}<br>
+			{{/each}}
+			{{#if display_phone}}<abbr title="Phone">P:</abbr> {{display_phone}}{{/if}}
+			</address>
+		</p>
+	</a>
+	{{/each}}
+	</script>
+	<div id="container">
+		<img src="map.png" id="subwaymap" usemap="#subway">
+	</div>
+	<map name="subway">
+		<area shape="rect" coords="252,160,376,182" alt="Van Cortlandt Park / 242 St" title="test Title" href="#" data-loc="40.889222,-73.898583">
+		<area shape="rect" coords="341,227,392,249" alt="238 St" title="testTitle2" href="#" data-loc="40.885097, -73.900608">
+	</map>
+	<div id="dialog" class="panel panel-default hidden">
+		<div class="panel-heading">
+			<div class="panel-title"><h1 id="station_name">Station Name</h1></div>
+
+			
+		</div>
+		<div id="results" class="panel-body">
+		<!-- results go here -->	
+		</div>
+	</div>
+</body>
+</html>
+
+
+
