@@ -10,7 +10,7 @@
 	overflow: scroll;
 	position: absolute;
 	top: 0px;
-	z-index: 9999;
+	z-index: 9998;
 }
 
 .hidden {
@@ -39,4 +39,14 @@ padding: 0px;
 
 div.panel-default>.panel-heading {
 background-color: #000000;
+}
+
+.panel-heading {
+	border-top-right-radius: 0px;
+	border-top-left-radius: 0px;
+}
+
+.list-group-item:first-child {
+	border-top-right-radius: 0px;
+	border-top-left-radius: 0px;
 }
