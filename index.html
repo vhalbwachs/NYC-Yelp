@@ -26,9 +26,10 @@
 	{{/each}}
 	</script>
 	<div id="container">
-		<img src="map.png" alt="181 St" usemap="#subway" id="subwaymap">
+		<img src="static/map.png" alt="181 St" usemap="#subway" id="subwaymap">
 	</div>
 	<map name="subway">
+		<!-- 1 line -->
 		<area shape="rect" coords="364,188,488,210" href="#" alt="Van Cortlandt Park / 242 St" data-loc="40.889222,-73.898583">
 		<area shape="rect" coords="448,250,499,272" href="#" alt="238 St" data-loc="40.885097, -73.900608">
 		<area shape="rect" coords="446,287,494,305" href="#" alt="231 St" data-loc="40.879,-73.905">
@@ -38,10 +39,10 @@
 		<area shape="rect" coords="341,473,423,489" href="#" alt="Dyckman St" data-loc="40.861,-73.925">
 		<area shape="rect" coords="330,502,386,515" href="#" alt="191 St" data-loc="40.855,-73.929">
 		<area shape="rect" coords="323,544,378,558" href="#" alt="181 St" data-loc="40.849,-73.934">
-      <area shape="rect" coords="328,624,373,654" href="#" alt="168 St" data-loc="40.841022,-73.939791">
-      <area shape="rect" coords="321,699,370,716" href="#" alt="157 St" data-loc="40.834,-73.944">
-      <area shape="rect" coords="288,762,336,782" href="#" alt="145 St" data-loc="40.826,-73.950">
-      <area shape="rect" coords="279,795,336,832" href="#" alt="137 St <br> City College" data-loc="40.821,-73.954">
+    	<area shape="rect" coords="328,624,373,654" href="#" alt="168 St" data-loc="40.841022,-73.939791">
+    	<area shape="rect" coords="321,699,370,716" href="#" alt="157 St" data-loc="40.834,-73.944">
+    	<area shape="rect" coords="288,762,336,782" href="#" alt="145 St" data-loc="40.826,-73.950">
+    	<area shape="rect" coords="279,795,336,832" href="#" alt="137 St <br> City College" data-loc="40.821,-73.954">
       <area shape="rect" coords="287,847,337,865" href="#" alt="125 St" data-loc="40.815,-73.958">
       <area shape="rect" coords="274,877,338,916" href="#" alt="116 St <br> Columbia University" data-loc="40.808,-73.964">
       <area shape="rect" coords="277,935,341,971" href="#" alt="Cathedral Parkway <br> 110 St" data-loc="40.804,-73.967">
@@ -60,21 +61,57 @@
       <area shape="rect" coords="486,1529,527,1542" href="#" alt="18 St" data-loc="40.741,-73.998">
       <area shape="rect" coords="461,1561,498,1575" href="#" alt="14 St" data-loc="40.737328,-73.996796">
       <area shape="poly" coords="414,1656,501,1626,504,1655,429,1675" href="#" alt="Christopher St <br> Sheridan Sq" data-loc="40.733,-74.003">
-      <area shape="rect" coords="455,1688,528,1706" href="#" alt="Houston St" data-loc="">
-      <area shape="rect" coords="492,1740,552,1755" href="#" alt="Canal St" data-loc="">
-      <area shape="rect" coords="485,1770,556,1784" href="#" alt="Franklin St" data-loc="">
-      <area shape="rect" coords="476,1804,560,1821" href="#" alt="Chambers St" data-loc="">
-      <area shape="rect" coords="498,1939,565,1955" href="#" alt="Rector St" data-loc="">
-      <area shape="rect" coords="592,2017,663,2041" href="#" data-loc="">
+      <area shape="rect" coords="455,1688,528,1706" href="#" alt="Houston St" data-loc="40.728592,-74.005322">
+      <area shape="rect" coords="492,1740,552,1755" href="#" alt="Canal St" data-loc="40.722,-74.006">
+      <area shape="rect" coords="485,1770,556,1784" href="#" alt="Franklin St" data-loc="40.719,-74.007">
+      <area shape="rect" coords="476,1804,560,1821" href="#" alt="Chambers St" data-loc="40.715517,-74.009233">
+      <area shape="rect" coords="498,1939,565,1955" href="#" alt="Rector St" data-loc="40.708,-74.013">
+      <area shape="rect" coords="592,2017,663,2041" href="#" alt="South Ferry" data-loc="40.702472,-74.012833">
+      <!-- 4 Line-->
+      <area shape="rect" coords="630,189,707,218" href="#" alt="Woodlawn" data-loc="40.886005,-73.878808">
+      <area shape="rect" coords="610,242,702,263" href="#" alt="Mosholu Pkwy" data-loc="40.879711,-73.884687">
+      <area shape="rect" coords="594,290,699,320" href="#" alt="Bedford Pk Blvd &lt;br&gt; Lehman College" data-loc="40.873545,-73.889837">
+      <area shape="rect" coords="589,352,691,372" href="#" alt="Kingsbridge Rd" data-loc="40.867444,-73.897433">
+      <area shape="rect" coords="596,394,684,422" href="#" alt="Fordham Rd" data-loc="40.862706,-73.901124">
+      <area shape="rect" coords="627,425,686,450" href="#" alt="183 St" data-loc="40.858324,-73.903999">
+      <area shape="rect" coords="603,455,682,474" href="#" alt="Burnside Av" data-loc="40.853748,-73.90739">
+      <area shape="rect" coords="635,494,685,516" href="#" alt="176 St" data-loc="40.848619,-73.911767">
+      <area shape="rect" coords="603,527,685,548" href="#" alt="Mt Eden Av" data-loc="40.844268,-73.914814">
+      <area shape="rect" coords="635,557,686,578" href="#" alt="170 St" data-loc="40.840178,-73.917732">
+      <area shape="rect" coords="633,606,683,625" href="#" alt="167 St" data-loc="40.835665,-73.921337">
+	  <area shape="poly" coords="627,632,649,650,658,642,682,673,656,694,606,632" href="#" alt="161 St &lt;br&gt; Yankee Stadium" data-loc="40.827937,-73.925886">
+	  <area shape="poly" coords="686,727,718,758,759,683,745,662" href="#" alt="149 St-Grand &lt;br&gt; Concourse" data-loc="40.8181,-73.9275">
+	  <area shape="rect" coords="695,774,776,797" href="#" alt="138 St-Grand Concourse" data-loc="40.81303,-73.929963">
+	  <area shape="rect" coords="680,863,745,886" href="#" alt="125 St" data-loc="40.804259,-73.937473">
+	  <area shape="rect" coords="678,899,734,921" href="#" alt="116 St" data-loc="40.798607,-73.942022">
+	  <area shape="rect" coords="679,936,732,954" href="#" alt="110 St" data-loc="40.794773,-73.944426">
+	  <area shape="rect" coords="681,992,735,1012" href="#" alt="103 St" data-loc="40.79029,-73.947687">
+	  <area shape="rect" coords="680,1034,733,1059" href="#" alt="96 St" data-loc="40.785773,-73.950949">
+	  <area shape="rect" coords="676,1080,734,1109" href="#" alt="86 St" data-loc="40.779469,-73.955626">
+	  <area shape="rect" coords="681,1148,736,1181" href="#" alt="77 St" data-loc="40.773587,-73.959875">
+	  <area shape="rect" coords="685,1194,781,1225" href="#" alt="68 St &lt;br&gt; Hunter College" data-loc="40.767834,-73.964124">
+	  <area shape="rect" coords="687,1285,729,1309" href="#" alt="59 St" data-loc="40.762471,-73.9679">
+	  <area shape="rect" coords="687,1337,727,1360" href="#" alt="51 St" data-loc="40.757075,-73.971977">
+	  <area shape="rect" coords="675,1387,762,1431" href="#" alt="Grand Central &lt;br&gt; 42 St" data-loc="40.752283,-73.977519">
+	  <area shape="rect" coords="666,1446,711,1461" href="#" alt="33 St" data-loc="40.746389,-73.981944">
+	  <area shape="rect" coords="664,1469,711,1484" href="#" alt="28 St" data-loc="40.74329,-73.984165">
+	  <area shape="rect" coords="667,1502,708,1518" href="#" alt= "23rd St" data-loc="40.740169,-73.98644">
+	  <area shape="rect" coords="663,1536,708,1573" href="#" alt="14 St" data-loc="40.7347,-73.9903">
+	  <area shape="rect" coords="678,1577,734,1600" href="#" alt="Astor Pl" data-loc="40.7297,-73.9917">
+	  <area shape="poly" coords="681,1664,701,1677,751,1626,735,1614" href="#" alt="Bleeker St" data-loc="40.7258,-73.9947">
+	  <area shape="rect" coords="690,1708,754,1721" href="#" alt="Spring St" data-loc="40.7222,-73.9972">
     </map>
 	<div id="dialog" class="panel panel-default hidden">
 		<div class="panel-heading">
-			<div class="panel-title"><h1 id="station_name">Station Name</h1></div>
+			<div class="panel-title"><h1 id="station_name"><!-- station name goes here --></h1></div>
 
 			
 		</div>
 		<div id="results" class="panel-body">
-		<!-- results go here -->	
+		<!-- results go here -->
+			<div id="loader" class="hidden">
+				<p>Loading</p>
+			</div>	
 		</div>
 	</div>
 </body>

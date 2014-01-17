@@ -29,7 +29,7 @@ span.badge {
 }
 
 #results {
-padding: 0px;
+	padding: 0px;
 }
 
 #station_name {
@@ -38,7 +38,7 @@ padding: 0px;
 }
 
 div.panel-default>.panel-heading {
-background-color: #000000;
+	background-color: #000000;
 }
 
 .panel-heading {
@@ -49,4 +49,9 @@ background-color: #000000;
 .list-group-item:first-child {
 	border-top-right-radius: 0px;
 	border-top-left-radius: 0px;
+}
+
+#loader {
+	height: 100%;
+	background-color: red;
 }
