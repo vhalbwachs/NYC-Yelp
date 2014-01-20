@@ -53,5 +53,6 @@ div.panel-default>.panel-heading {
 
 #loader {
 	height: 100%;
-	background-color: red;
+	background-color: white;
+	text-align: center;
 }

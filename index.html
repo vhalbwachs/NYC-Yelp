@@ -7,6 +7,7 @@
 	<script src="lib/mapFunctions.js"type="text/javascript"></script>
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
 </head>
 <body>
 	<script id="results-template" type="text/x-handlebars-template">
@@ -14,7 +15,7 @@
 	<a href="{{url}}" class="list-group-item">
 		<div><h4 class="list-group-item-heading">{{name}}</h4><img <img width="75" height="15" class="pull-right" src="{{rating_img_url}}"></h4><span class="badge pull-right">{{review_count}}</span></div>
 		<p class="list-group-item-text">
-			<img class="pull-right" width="75" height="75" src="{{image_url}}">
+			<img class="pull-right" width="75" height="75" src={{#if image_url}}"{{image_url}}"{{else}}"http://s3-media1.ak.yelpcdn.com/assets/2/www/img/5f69f303f17c/default_avatars/business_medium_square.png"{{/if}}>
 			<address>
 			{{#each location.display_address}} 
 			{{this}}<br>
@@ -26,7 +27,7 @@
 	{{/each}}
 	</script>
 	<div id="container">
-		<img src="static/map.png" alt="181 St" usemap="#subway" id="subwaymap">
+		<img src="static/map.png" alt="181 St" width="2600" height="2808" usemap="#subway" id="subwaymap">
 	</div>
 	<map name="subway">
 		<!-- 1 line -->
@@ -100,6 +101,30 @@
 	  <area shape="rect" coords="678,1577,734,1600" href="#" alt="Astor Pl" data-loc="40.7297,-73.9917">
 	  <area shape="poly" coords="681,1664,701,1677,751,1626,735,1614" href="#" alt="Bleeker St" data-loc="40.7258,-73.9947">
 	  <area shape="rect" coords="690,1708,754,1721" href="#" alt="Spring St" data-loc="40.7222,-73.9972">
+      <area shape="poly" coords="688,1826,712,1856,794,1858,799,1836,712,1833,697,1818" href="#" alt="Brooklyn Bridge &lt;br&gt; City Hall" data-loc="40.712778,-74.004722">
+	  <area shape="poly" coords="659,1889,689,1871,760,1876,753,1895,734,1916,699,1914" href="#" alt="Fulton St" data-loc="40.710206,-74.007744">
+	  <area shape="rect" coords="645,1918,693,1941" href="#" alt="Wall St" data-loc="40.70771,-74.011717">
+	  <area shape="rect" coords="556,1998,647,2014" href="#" alt="Bowling Green" data-loc="40.704106,-74.014521">
+	  <area shape="poly" coords="1003,1972,1014,1979,1035,1957,1050,1953,1066,1934,1068,1915,1053,1919" href="#" alt="Borough Hall" data-loc="40.693655,-73.990216">
+      <area shape="rect" coords="832,45,902,67" href="#" alt="Wakefield &lt;br&gt; 241 St" data-loc="40.903,-73.850">
+      <area shape="rect" coords="830,90,904,113" href="#" alt="Nereid Ave" data-loc="40.898,-73.854">
+      <area shape="rect" coords="830,119,887,145" href="#" alt="233 St" data-loc="40.893,-73.857">
+      <area shape="rect" coords="831,154,886,178" href="#" alt="225 St" data-loc="40.888,-73.860">
+      <area shape="rect" coords="834,188,895,213" href="#" alt="219 St" data-loc="40.883,-73.863">
+      <area shape="rect" coords="852,223,932,243" href="#" alt="Gun Hill Rd" data-loc="40.877,-73.867">
+      <area shape="rect" coords="823,277,894,297" href="#" alt="Burke Ave" data-loc="40.871,-73.867">
+      <area shape="rect" coords="837,309,912,335" href="#" alt="Allerton Ave" data-loc="40.865,-73.867">
+      <area shape="rect" coords="846,363,938,391" href="#" alt="Pelham Pkwy" data-loc="40.857,-73.868">
+      <area shape="rect" coords="866,401,944,427" href="#" alt="Bronx Park &lt;br&gt; East" data-loc="40.849,-73.868">
+      <area shape="rect" coords="917,454,978,492" href="#" alt="E 180 St" data-loc="40.841,-73.874">
+      <area shape="poly" coords="825,416,900,492,891,499,877,492,863,496,816,443" href="#" alt="West Farms Sq <br> E Tremont Ave" data-loc="40.840,-73.880">
+      <area shape="rect" coords="846,518,894,539" href="#" alt="174 St" data-loc="40.837,-73.888">
+      <area shape="rect" coords="820,574,899,596" href="#" alt="Freeman St" data-loc="40.830,-73.892">
+      <area shape="rect" coords="820,621,901,645" href="#" alt="Simpson St" data-loc="40.824,-73.893">
+      <area shape="rect" coords="814,659,895,677" href="#" alt="Intervale Av" data-loc="40.822,-73.897">
+      <area shape="rect" coords="793,685,875,702" href="#" alt="Prospect Av" data-loc="40.819,-73.901">
+      <area shape="rect" coords="764,710,843,728" href="#" alt="Jackson Av" data-loc="40.8163,-73.908">
+      <area shape="rect" coords="741,738,809,765" href="#" alt="3 Av - 149 St" data-loc="40.816099,-73.917676">
     </map>
 	<div id="dialog" class="panel panel-default hidden">
 		<div class="panel-heading">
@@ -109,10 +134,10 @@
 		</div>
 		<div id="results" class="panel-body">
 		<!-- results go here -->
-			<div id="loader" class="hidden">
-				<p>Loading</p>
-			</div>	
 		</div>
+		<div id="loader" class="hidden">
+			<p>Loading</p>
+		</div>	
 	</div>
 </body>
 </html>
