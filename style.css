@@ -56,3 +56,13 @@ div.panel-default>.panel-heading {
 	background-color: white;
 	text-align: center;
 }
+
+.white {
+	color: white;
+}
+
+#close {
+	position: absolute;
+	margin-left: 360px;
+	margin-top: 5px;
+}
