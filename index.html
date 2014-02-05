@@ -1,17 +1,20 @@
 <html>
 <head>
 	<title>New Yelp City</title>
+	<meta name='viewport' content='width=1400'>
 	<script src="http://code.jquery.com/jquery-latest.js"></script>
 	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 	<script type="text/javascript" src="lib/handlebars-v1.3.0.js"></script>
 	<script src="lib/mapFunctions.js"type="text/javascript"></script>
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
 </head>
 <body>
 	<script id="results-template" type="text/x-handlebars-template">
 	{{#each businesses}}
+	<div class="result-wrapper" data-rating="{{rating}}" data-distance="-{{distance}}" data-review-count="{{review_count}}">
 	<a href="{{url}}" class="list-group-item">
 		<div><h4 class="list-group-item-heading">{{name}}</h4><img <img width="75" height="15" class="pull-right" src="{{rating_img_url}}"></h4><span class="badge pull-right">{{review_count}}</span></div>
 		<p class="list-group-item-text">
@@ -24,8 +27,17 @@
 			</address>
 		</p>
 	</a>
+	</div>
 	{{/each}}
 	</script>
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="containers">
+		    <h3 id="station" class="navbar-text">Pelham Bay Parkway <br> Test</h3>
+		    <ul class="nav navbar-nav navbar-right" id="exit">
+	        	<li class="red"><a href="#">Exit</a></li>
+	    	</ul>
+    </div>
+	</nav>
 	<div id="container">
 		<img src="static/map.png" alt="181 St" width="2600" height="2808" usemap="#subway" id="subwaymap">
 	</div>
@@ -127,9 +139,21 @@
       <area shape="rect" coords="741,738,809,765" href="#" alt="3 Av - 149 St" data-loc="40.816099,-73.917676">
     </map>
 	<div id="dialog" class="panel panel-default hidden">
+		<div class="btn-group">
+			<button class="btn btn-default dropdown-toggle" data-toggle="dropdown"> <span id="sort-picker"></span> <span class="caret pull-right"></span>
+		    </button>
+		    <ul class="dropdown-menu pull-right" role="menu">
+		      <li class="sort-list" data-sort-short-name="distance" data-sort-long-name="Distance"><a href="#">Distance</a></li>
+		      <li class="sort-list" data-sort-short-name="rating" data-sort-long-name="Rating"><a href="#">Rating</a></li>
+		      <li class="sort-list" data-sort-short-name="review_count" data-sort-long-name="Review Count"><a href="#">Review Count</a></li>
+		    </ul>
+	  	</div>
+  		<div id="results" class="panel-body">
+		<!-- results go here -->
+		</div>
+		<div id="loader">
+			Loading content from <br> <img src="http://s3-media3.ak.yelpcdn.com/assets/2/www/img/65526d1a519b/developers/Powered_By_Yelp_Red.png">
+		</div>
 	</div>	
 </body>
 </html>
-
-
-

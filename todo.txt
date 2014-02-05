@@ -1,7 +1,2 @@
 todo: 
- --close panel
- --fix loading screen for panel
- --add global loading mechanism 
-
-
---set interval and time
+ --add global loading mechanism
