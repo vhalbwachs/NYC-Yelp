@@ -1,7 +1,7 @@
 <?php
 
 require_once ('OAuth.php');
-session_start();
+// session_start();
 
 $location = $_GET['coords'];
 

@@ -32,11 +32,11 @@
 	</script>
 	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 		<div class="containers">
-		    <h3 id="station" class="navbar-text">Pelham Bay Parkway <br> Test</h3>
-		    <ul class="nav navbar-nav navbar-right" id="exit">
-	        	<li class="red"><a href="#">Exit</a></li>
-	    	</ul>
-    </div>
+			<h3 id="station" class="navbar-text">New Yelp City</h3>			
+			<ul class="nav navbar-nav navbar-right">
+				<a href=""><li class="info"><span class="glyphicon glyphicon-info-sign"></span></li></a>
+			</ul>
+		</div>
 	</nav>
 	<div id="container">
 		<img src="static/map.png" alt="181 St" width="2600" height="2808" usemap="#subway" id="subwaymap">
@@ -56,14 +56,14 @@
     	<area shape="rect" coords="321,699,370,716" href="#" alt="157 St" data-loc="40.834,-73.944">
     	<area shape="rect" coords="288,762,336,782" href="#" alt="145 St" data-loc="40.826,-73.950">
     	<area shape="rect" coords="279,795,336,832" href="#" alt="137 St <br> City College" data-loc="40.821,-73.954">
-      <area shape="rect" coords="287,847,337,865" href="#" alt="125 St" data-loc="40.815,-73.958">
-      <area shape="rect" coords="274,877,338,916" href="#" alt="116 St <br> Columbia University" data-loc="40.808,-73.964">
-      <area shape="rect" coords="277,935,341,971" href="#" alt="Cathedral Parkway <br> 110 St" data-loc="40.804,-73.967">
-      <area shape="rect" coords="299,991,348,1005" href="#" alt="103 St" data-loc="40.799419,-73.968158">
-      <area shape="rect" coords="307,1039,348,1057" href="#" alt="96 St" data-loc="40.7941,-73.972">
-      <area shape="rect" coords="306,1087,349,1104" href="#" alt="86 St" data-loc="40.7883,-73.9764">
-      <area shape="rect" coords="304,1131,349,1146" href="#" alt="79 St" data-loc="40.784,-73.980">
-      <area shape="rect" coords="316,1173,355,1192" href="#" alt="72 St" data-loc="40.779,-73.982">
+    	<area shape="rect" coords="287,847,337,865" href="#" alt="125 St" data-loc="40.815,-.958">
+    	<area shape="rect" coords="274,877,338,916" href="#" alt="116 St <br> Columbi	University" data-loc="40.808,-73.964">
+    	<area shape="rect" coords="277,935,341,971" href="#" alt="Cathedral Parkway <br> 110 St" data-loc="40.804,-73.967">
+    	<area shape="rect" coords="299,991,348,1005" href="#" alt="103 St" data-loc="40.799419,-73.968158">
+    	<area shape="rect" coords="307,1039,348,1057" href="#" alt="96 St" data-loc="40.7941,-73.972">
+    	<area shape="rect" coords="306,1087,349,1104" href="#" alt="86 St" data-loc="40.7883,-73.9764">
+    	<area shape="rect" coords="304,1131,349,1146" href="#" alt="79 St" data-loc="40.784,-73.980">
+    	<area shape="rect" coords="316,1173,355,1192" href="#" alt="72 St" data-loc="40.779,-73.982">
       <area shape="rect" coords="282,1217,371,1240" href="#" alt="66 St <br> Lincoln Center" data-loc="40.774,-73.982">
       <area shape="rect" coords="303,1273,417,1297" href="#" alt="59 St <br> Columbus Circle" data-loc="40.767997,-73.981934">
       <area shape="rect" coords="432,1345,472,1362" href="#" alt="50 St" data-loc="40.761,-73.984">
@@ -139,21 +139,40 @@
       <area shape="rect" coords="741,738,809,765" href="#" alt="3 Av - 149 St" data-loc="40.816099,-73.917676">
     </map>
 	<div id="dialog" class="panel panel-default hidden">
-		<div class="btn-group">
-			<button class="btn btn-default dropdown-toggle" data-toggle="dropdown"> <span id="sort-picker"></span> <span class="caret pull-right"></span>
-		    </button>
-		    <ul class="dropdown-menu pull-right" role="menu">
-		      <li class="sort-list" data-sort-short-name="distance" data-sort-long-name="Distance"><a href="#">Distance</a></li>
-		      <li class="sort-list" data-sort-short-name="rating" data-sort-long-name="Rating"><a href="#">Rating</a></li>
-		      <li class="sort-list" data-sort-short-name="review_count" data-sort-long-name="Review Count"><a href="#">Review Count</a></li>
-		    </ul>
-	  	</div>
-  		<div id="results" class="panel-body">
+		<div class="btn-group" id="sort-button">
+			<button class="btn btn-default dropdown-toggle btn-sort-picker" data-toggle="dropdown"> <span id="sort-picker"></span> <span class="caret pull-right"></span>
+			</button>
+			<ul class="dropdown-menu pull-right" role="menu">
+				<li class="sort-list" data-sort-short-name="distance" data-sort-long-name="Distance"><a href="#">Distance</a></li>
+				<li class="sort-list" data-sort-short-name="rating" data-sort-long-name="Rating"><a href="#">Rating</a></li>
+				<li class="sort-list" data-sort-short-name="review_count" data-sort-long-name="Review Count"><a href="#">Review Count</a></li>
+			</ul>
+		</div>
+		<div id="results" class="panel-body">
 		<!-- results go here -->
 		</div>
 		<div id="loader">
-			Loading content from <br> <img src="http://s3-media3.ak.yelpcdn.com/assets/2/www/img/65526d1a519b/developers/Powered_By_Yelp_Red.png">
+			<p>Loading results...</p>
 		</div>
-	</div>	
+	</div>
+	<div class="modal fade" id="about-modal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title">About New Yelp City</h4>
+				</div>
+				<div class="modal-body">
+					<h1>About New Yelp City</h1>
+					<p>New Yelp City is an app&hellip;</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Return to New Yelp City</button>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->	
 </body>
 </html>
+
+

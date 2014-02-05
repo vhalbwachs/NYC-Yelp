@@ -19,7 +19,6 @@
 h4 {
 	display: inline-block;
 	width: 230px;
-	color: red;
 }
 
 span.badge {
@@ -76,7 +75,6 @@ div.panel-default>.panel-heading {
 .navbar-nav > li > a {
 	color: white;
 	padding: 3px 10px 0 2px;
-	/*font-weight: bold;*/
 	font-size: 28px;
 }
 
@@ -106,10 +104,26 @@ ul.nav.navbar-nav.navbar-right {
     height:100%;
 }
 
-button {
+.btn-sort-picker {
 	width: 398px;
 }
 
 .caret {
 	margin-top: 8px;
+}
+
+span.glyphicon-info-sign {
+    font-size: 1.8em;
+}
+
+.info {
+	padding: 12px;
+}
+
+a {
+	color: white;
+}
+
+a:hover {
+	color: gray;
 }
