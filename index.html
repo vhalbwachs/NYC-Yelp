@@ -4,6 +4,16 @@
 	<meta name='viewport' content='width=1400'>
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48043798-1', 'vinhalbwachs.com');
+  ga('send', 'pageview');
+
+  </script>
 </head>
 <body>
 	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -484,7 +494,7 @@
     </map>
 	<div id="dialog" class="panel panel-default hidden">
 		<div class="btn-group" id="sort-button">
-			<button class="btn btn-default dropdown-toggle btn-sort-picker" data-toggle="dropdown"> <span id="sort-picker"></span> <span class="caret pull-right"></span>
+			<button class="btn btn-default dropdown-toggle btn-sort-picker no-radius" data-toggle="dropdown"> <span id="sort-picker"></span> <span class="caret pull-right"></span>
 			</button>
 			<ul class="dropdown-menu pull-right" role="menu">
 				<li class="sort-list" data-sort-short-name="distance" data-sort-long-name="Distance"><a href="#">Distance</a></li>
@@ -524,7 +534,7 @@
   <script id="results-template" type="text/x-handlebars-template">
   {{#each businesses}}
   <div class="result-wrapper" data-rating="{{rating}}" data-distance="-{{distance}}" data-review-count="{{review_count}}">
-  <a href="{{url}}" class="list-group-item">
+  <a href="{{url}}" class="list-group-item no-radius">
     <div><h4 class="list-group-item-heading">{{name}}</h4><img <img width="75" height="15" class="pull-right" src="{{rating_img_url}}"></h4><span class="badge pull-right">{{review_count}}</span></div>
     <p class="list-group-item-text">
       <img class="pull-right" width="75" height="75" src={{#if image_url}}"{{image_url}}"{{else}}"http://s3-media1.ak.yelpcdn.com/assets/2/www/img/5f69f303f17c/default_avatars/business_medium_square.png"{{/if}}>
@@ -538,16 +548,6 @@
   </a>
   </div>
   {{/each}}
-  </script>
-  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-48043798-1', 'vinhalbwachs.com');
-  ga('send', 'pageview');
-
   </script>
 </body>
 </html>

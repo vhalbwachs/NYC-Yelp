@@ -78,6 +78,11 @@ div.panel-default>.panel-heading {
 	font-size: 28px;
 }
 
+.navbar-default 
+.navbar-nav > li > a:hover {
+	color: white;
+}
+
 .panel {
 	margin-bottom: 0px;
 }
@@ -126,4 +131,20 @@ a {
 
 a:hover {
 	color: gray;
+}
+
+.ui-draggable {
+	cursor: url(https://mail.google.com/mail/images/2/openhand.cur) 8 8, move;
+}
+
+.ui-draggable-dragging, .ui-draggable:active {
+	cursor: url(https://mail.google.com/mail/images/2/closedhand.cur) 8 8, move;
+}
+
+nav.navbar {
+	border: none;
+}
+
+.no-radius {
+	border-radius:0px !important;
 }
