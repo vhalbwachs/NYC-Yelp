@@ -8,10 +8,10 @@ $location = $_GET['coords'];
 //request url
 $unsigned_url = "http://api.yelp.com/v2/search?term=food&ll=".$location."&radius_filter=500";
 
-$consumer_key = "_BOgrYWtudMVJT5btQt68A";
-$consumer_secret = "MNBMvD1A_OvRK7eT8hgSNBWHsAs";
-$token = "OflGoG9cjrz4x8qfTDqvpFKz9ZtzLVxC";
-$token_secret = "zaGvigsHMRIiv5_u526vTekMtfs";
+$consumer_key = "INSERT KEY HERE";
+$consumer_secret = "INSERT KEY HERE";
+$token = "INSERT KEY HERE";
+$token_secret = "INSERT KEY HERE";
 
 $token = new OAuthToken($token, $token_secret);
 $consumer = new OAuthConsumer($consumer_key, $consumer_secret);
